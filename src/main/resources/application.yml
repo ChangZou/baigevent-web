@@ -1,0 +1,27 @@
+server:
+  port: 8098
+
+spring:
+  datasource:  # db
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: zmlzml111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bagevent_test?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  thymeleaf:   #Thymeleaf配置
+    cache: false
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+
+api:
+  v1: /api/v1
